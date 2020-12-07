@@ -86,7 +86,7 @@ class NewsletterController {
   }
 
   async deleteSubscriptions(req, res, next) {
-    let { artistId } = req.body;
+    let { artistId } = req.body.data;
     let parsedId = parseInt(artistId);
     if (parsedId) {
       try {
