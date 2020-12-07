@@ -21,5 +21,8 @@ newsletter
   .delete((req, res, next) => {
     controller.deleteSubscriptions(req, res, next);
   });
+newsletter.route('/ping').get((req, res, next) => {
+  controller.ping(req, res, next);
+});
 
 module.exports = newsletter;
